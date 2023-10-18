@@ -1,4 +1,5 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { fetchProduct } from '../Components/ApiOperation/Operation';
 
 const GlobalContext = React.createContext();
 
@@ -8,10 +9,26 @@ export const useGlobalContext = () => {
 
 export default function GlobalContextProvider({ children }) {
   const [loading, setLoading] = useState(false);
+  const [prodData, setProdData] = useState([]);
+  const [allData, setAllData] = useState();
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    let res = await fetchProduct();
+    setProdData(res?.data);
+    setAllData(res?.data);
+  };
 
   const value = {
     loading,
     setLoading,
+    prodData,
+    setProdData,
+    allData,
+    setAllData,
   };
 
   return (

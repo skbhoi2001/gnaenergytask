@@ -1,0 +1,57 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.filterProdComponent {
+  display: flex;
+  gap: 5%;
+  width: 90%;
+  margin: auto;
+}
+
+.filterComp {
+  width: 20%;
+  background-color: red;
+}
+
+.prodComp {
+  width: 75%;
+}
+
+.searchComponent {
+  height: 40px;
+  width: 90%;
+  margin: auto;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputBox {
+  width: 80%;
+  border-radius: 8px 0px 0px 8px;
+  border: 1px solid rgb(185, 185, 185);
+}
+
+.inputBox:active,
+.inputBox:focus,
+.inputBox:focus-visible {
+  border: 1px;
+  outline: 0px;
+  border-radius: 8px;
+}
+
+.searchButton {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(1, 1, 135);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 0px 8px 8px 0px;
+}

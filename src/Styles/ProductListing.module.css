@@ -1,0 +1,114 @@
+.prodMainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.prodImage {
+  height: 200px;
+  width: 200px;
+}
+
+.prodSection {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 8px;
+}
+
+.prodDesc1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prodDetails {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prodRatSec {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  text-align: right;
+}
+
+.prodHeadTitle {
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+}
+
+.prodDescription {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(132, 132, 132);
+}
+
+.starContainer {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: end;
+}
+
+.reviewCount {
+  font-size: 12px;
+  color: rgb(155, 155, 155);
+  font-weight: 600;
+}
+
+.priceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.priceTag {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(132, 132, 132);
+}
+
+.prodPrice {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.viewButton {
+  height: 40px;
+  width: 150px;
+  background-color: rgb(1, 1, 135);
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.paginationButtonCont {
+  padding: 40px 0px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginationBtn {
+  height: 30px;
+  width: 30px;
+  border: 0px;
+}
+
+.activePage {
+  background-color: rgb(142, 214, 255);
+}
