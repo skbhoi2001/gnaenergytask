@@ -22,9 +22,12 @@ const ProductListing = () => {
     currentPage * itemsPerPage
   );
 
-  console.debug(prodData);
   return (
-    <div>
+    <div className={Styles.mainContainer}>
+      <div className={Styles.prodBrifList}>
+        <div className={Styles.prodList}>{prodData?.length} products available</div>
+        <div className={Styles.sortButton}>Sort</div>
+      </div>
       <div className={Styles.prodMainContainer}>
         {paginatedData?.map((ele) => (
           <div className={Styles.prodSection}>
