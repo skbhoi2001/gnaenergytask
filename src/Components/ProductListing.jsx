@@ -8,16 +8,20 @@ const itemsPerPage = 5;
 let init = 0;
 
 const ProductListing = () => {
-  const { prodData, allData } = useGlobalContext();
-
+  const { prodData,setProdData, allData, filterData, setFilterData } = useGlobalContext();
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(prodData.length / itemsPerPage);
+
+  const [sortData,setSortData] = useState("normal")
+
+  const totalPages = Math.ceil(
+    (filterData.length > 0 ? filterData.length : prodData.length) / itemsPerPage
+  );
 
   const handleChangePage = (page) => {
     setCurrentPage(page);
   };
 
-  const paginatedData = prodData.slice(
+  const paginatedData = (filterData.length > 0 ? filterData : prodData).slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -25,7 +29,9 @@ const ProductListing = () => {
   return (
     <div className={Styles.mainContainer}>
       <div className={Styles.prodBrifList}>
-        <div className={Styles.prodList}>{prodData?.length} products available</div>
+        <div className={Styles.prodList}>
+          {prodData?.length} products available
+        </div>
         <div className={Styles.sortButton}>Sort</div>
       </div>
       <div className={Styles.prodMainContainer}>
@@ -73,7 +79,9 @@ const ProductListing = () => {
           <button
             key={index + 1}
             onClick={() => handleChangePage(index + 1)}
-            className={`${Styles.paginationBtn} ${currentPage === index + 1 ? Styles.activePage : ''}`}
+            className={`${Styles.paginationBtn} ${
+              currentPage === index + 1 ? Styles.activePage : ''
+            }`}
           >
             {index + 1}
           </button>

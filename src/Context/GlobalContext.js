@@ -10,7 +10,8 @@ export const useGlobalContext = () => {
 export default function GlobalContextProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [prodData, setProdData] = useState([]);
-  const [allData, setAllData] = useState();
+  const [allData, setAllData] = useState([]);
+  const [filterData, setFilterData] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -29,6 +30,8 @@ export default function GlobalContextProvider({ children }) {
     setProdData,
     allData,
     setAllData,
+    filterData,
+    setFilterData,
   };
 
   return (

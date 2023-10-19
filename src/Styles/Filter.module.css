@@ -1,0 +1,17 @@
+.categorySection {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.eachClickElem {
+  display: flex;
+  gap: 5px;
+}
+
+.eachEle {
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
